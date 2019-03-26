@@ -10,8 +10,8 @@ export const locate  = (beacon, stations, px_meter) => {
     // d = 10^(TxPower - RSSI) / (10 * n))
 
     function calculateDistance(rssi) {
-        let P = -69; // @TODO This value should come from MQTT message
-        let n = 3;
+        let P = -50; // @TODO This value should come from MQTT message
+        let n = 2;
         let d = Math.pow(10, ((P-rssi) / (10*n)) ); //(n ranges from 2 to 4)
         return d*px_meter;
     }
