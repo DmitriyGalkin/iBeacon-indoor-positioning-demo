@@ -20,7 +20,7 @@ class App extends Component {
             visible: false,
             width: 800,
             height: 600,
-            widthMeters: 8.5
+            widthMeters: 11.8
         };
     }
 

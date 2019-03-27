@@ -11,7 +11,7 @@ export const locate  = (beacon, stations, px_meter) => {
 
     function calculateDistance(rssi) {
         let P = -50; // @TODO This value should come from MQTT message
-        let n = 2;
+        let n = 3;
         let d = Math.pow(10, ((P-rssi) / (10*n)) ); //(n ranges from 2 to 4)
         return d*px_meter;
     }
